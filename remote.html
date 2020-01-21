@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tutorial Git</title>
+	<style>
+		*{box-sizing: border-box;}
+		body{margin:auto;}
+		.wrapper{max-width:1000px; margin: auto;}
+
+		code, pre {
+		    font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+		    font-size: .8em;
+		    color: #555;
+		    border: 1px solid #e1e1e8;
+		    background-color: #f7f7f9;
+		    margin: 0 0 1rem;
+		    word-break: break-all;
+   			word-wrap: break-word;
+    		white-space: pre-wrap;		    
+		}
+	</style>
+</head>
+<body>
+	<header id="header">
+		<h1><a href="index.html">Tutorial Git</a></h1>
+		<nav>
+			<ul>
+				<li><a href="index.html">Git y Github</a></li>
+				<li><a href="gitstatus.html">Flujo de Trabajo</a></li>
+				<li><a href="commandsgit.html">Comandos Básicos</a></li>
+				<li><a href="branches.html">Ramas y Fusiones</a></li>
+				<li><a href="remote.html">Repositorio Remoto</a></li>
+				<li><a href="contact.html">Contacto</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main class="wrapper">
+		<div class="title_page">
+			<h2>Trabajando con repositorios remotos</h2>
+			<p>Los cambios incluidos en los repositorios locales se pueden sincronizar con un repositorio remoto. El que se puede almacenar en un servidor propio, en una carpeta o en un servicio de terceros. Entre los servicios para almacenar repositorios Git el más popular es <a href="https://github.com/">GitHub</a>, aunque existen diferentes servicios alternativos.</p>
+			<img src="img/github.jpg" alt="github">
+		</div>
+		<section class="commands">
+			<h3>Clonar un repositorio</h3>
+			<div class="commands_details">
+				<h4>Subir un proyecto a un repositorio remoto</h4>
+				<p>Para poder subir un proyecto de un repositorio local a un repositorio remoto, hay que cumplir con lo siguiente:</p>
+				<ul>
+					<li>Tener una cuenta en github</li>
+					<li>Haber creado un repositorio en github</li>
+				</ul>
+				<p>Con esas condiciones cumplidas, podemos subir nuestro repositorio con los comandos siguientes:</p>
+				<pre class="gitcommands">
+				git remote add origin https://github.com/nombreUsuario/repositorio.git
+				git push -u origin master
+				</pre>
+				<p>Encontramos esos comandos en la pagina de github, una vez creado el repositorio.</p>
+				<img src="img/githubremote.png" alt="github remote">
+			
+			</div>
+			<div class="commands_details">
+				<h4>Clonar un repositorio</h4>
+				<p>Esto es lo que se tiene que escribir cuando se desea subir datos a un repositorio remoto. Para descargar los cambios de un repositorio remoto existente es necesario ir a una carpeta y escribir el comando clone. Por ejemplo, para un proyecto existente en GitHub el comando seria de la forma:</p>
+				<pre class="gitcommands">
+				git clone https://github.com/nombreUsuario/repositorio.git
+				</pre>
+				<p>Esto descarga el proyecto completo desde el repositorio remoto. En posteriores ocasiones, para descargar los cambios de otros programadores, se tiene utiliza el comando <code>pull</code> de Git. Es decir, se tiene que escribir</p>
+				<pre class="gitcommands">
+				git pull
+				</pre>
+			
+			</div>
+			
+		
+
+		</section>
+	</main>
+	<footer>
+		<p>&copy; Escuela Espai - Barcelona 2020</p>
+	</footer>
+</body>
+</html>

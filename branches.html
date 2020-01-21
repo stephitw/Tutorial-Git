@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tutorial Git</title>
+	<style>
+		*{box-sizing: border-box;}
+		body{margin:auto;}
+		.wrapper{max-width:1000px; margin: auto;}
+
+		code, pre {
+		    font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+		    font-size: .8em;
+		    color: #555;
+		    border: 1px solid #e1e1e8;
+		    background-color: #f7f7f9;
+		    margin: 0 0 1rem;
+		    word-break: break-all;
+   			word-wrap: break-word;
+    		white-space: pre-wrap;		    
+		}
+	</style>
+</head>
+<body>
+	<header id="header">
+		<h1><a href="index.html">Tutorial Git</a></h1>
+		<nav>
+			<ul>
+				<li><a href="index.html">Git y Github</a></li>
+				<li><a href="gitstatus.html">Flujo de Trabajo</a></li>
+				<li><a href="commandsgit.html">Comandos Básicos</a></li>
+				<li><a href="branches.html">Ramas y Fusiones</a></li>
+				<li><a href="remote.html">Repositorio Remoto</a></li>
+				<li><a href="contact.html">Contacto</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main class="wrapper">
+		<div class="title_page">
+			<h2>Gestión de ramas</h2>
+			<p>Una de las funcionalidades más interesantes de los sistemas de gestión de versiones es la posibilidad de trabajar con ramas. Para trabajar así con diferentes copias del código para evaluar la inclusión de funcionalidades sin afectar a la estabilidad del programa. Un ejemplo de ello es la metodología GitFlow. Para crear una nueva rama se tiene que utilizar el comando</p>
+			<img src="img/branch.png" alt="git branch">
+		</div>
+		<section class="commands">
+			<h3>Aquí os dejo unos comandos para empezar a trabajar con ramas</h3>
+			<div class="commands_details">
+				<h4>Crear una rama nueva</h4>
+				<pre class="gitcommands">
+				git branch NombreRama
+				</pre>
+				<p>en donde <code>NombreRama</code> se tiene que reemplazar por el nombre que se le desea dar a la rama. Para moverse a la nueva rama u otra se escribe el comando:</p>
+				<pre class="gitcommands">
+				git checkout NombreRama
+				</pre>
+				<p>Para comprobar en que rama estamos trabajando:</p>
+				<pre class="gitcommands">
+				git branch 
+				</pre>
+				<img src="img/gitbranch.png" alt="git branch">
+			</div>
+			<strong>Veremos en un proximo seminario los comandos para fusionar 2 ramas</strong>
+		
+
+		</section>
+	</main>
+	<footer>
+		<p>&copy; Escuela Espai - Barcelona 2020</p>
+	</footer>
+</body>
+</html>

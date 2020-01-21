@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tutorial Git</title>
+	<style>
+		*{box-sizing: border-box;}
+		body{margin:auto;}
+		.wrapper{max-width:1000px; margin: auto;}
+
+		code, pre {
+		    font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+		    font-size: .8em;
+		    color: #555;
+		    border: 1px solid #e1e1e8;
+		    background-color: #f7f7f9;
+		    margin: 0 0 1rem;
+		    word-break: break-all;
+   			word-wrap: break-word;
+    		white-space: pre-wrap;		    
+		}
+	</style>
+</head>
+<body>
+	<header id="header">
+		<h1><a href="index.html">Tutorial Git</a></h1>
+		<nav>
+			<ul>
+				<li><a href="index.html">Git y Github</a></li>
+				<li><a href="gitstatus.html">Flujo de Trabajo</a></li>
+				<li><a href="commandsgit.html">Comandos Básicos</a></li>
+				<li><a href="branches.html">Ramas y Fusiones</a></li>
+				<li><a href="remote.html">Repositorio Remoto</a></li>
+				<li><a href="contact.html">Contacto</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main class="wrapper">
+		<div class="title_page">
+			<h2>Comandos Básicos</h2>
+			<p>Una vez instalado <a href="https://git-scm.com/downloads">git</a> en nuestro ordenador a traves de la pagina oficial, abrimos la consola de nuestra disposito y estamos listos para empezar.</p>
+		
+		</div>
+		<section class="commands">
+			<h3>Aquí os dejo unos comandos para empezar un proyecto git:</h3>
+			<div class="commands_details">
+				<h4>Configuración del usuario</h4>
+				<p>Los cambios introducidos en un repositorio Git se tiene que asociar a un programador. Información que se almacena en un archivo que es válido para todos los repositorios en una cuenta de usuario. Para fijar estas opciones, solamente es necesario hacer esto una antes de utilizar Git, se pueden utilizar los siguientes comandos:</p>
+				<pre class="gitcommands">
+				git config --global user.name "Nombre"
+				git config --global user.email "nombre@mail.com"
+				</pre>
+				<p>En donde se ha de reemplazar <code>Nombre</code> por el nombre del usuario y <code>nombre@mail.com</code> por la dirección de correo electrónico.</p>
+			</div>
+			<div class="commands_details">
+				<h4>Inicialización del repositorio</h4>
+				<p>El primer paso es accedera un proyecto/carpeta desde la consola.</p>
+				<pre class="gitcommands">
+				cd desktop
+				Desktop>cd nombre de la carpeta
+				</pre>
+				<p>Una vez en la carpeta desde la consola, el primer comando que se deberá ejecutar para inicializar un repositorio es <code>git init</code>. Al ejecutarse crea una carpeta <code>.git</code>, oculta en los sistemas UNIX, donde se almacena el repositorio Git. Un repositorio es una recopilación de todos los cambios realizados en el proyecto durante la vida de este, crean un historial de los cambios.</p>
+				<pre class="gitcommands">
+				git init
+				</pre>
+				<img src="img/gitinit.png" alt="git init">
+			</div>
+			<div class="commands_details">
+				<h4>Añadir archivos al repositorio</h4>
+				<p>Una vez que hemos trabajado en nuestro proyecto y antes de aprobar cualquier cambio podemos ver los archivos que tienen cambios con el comando:</p>
+				<pre class="gitcommands">
+				git status
+				</pre>
+				<img src="img/gitstatus.png" alt="git status">
+				<p>Para respetar el flugo de trabajo de git, tendremos que subir las modificaciones al staging area con el comando:</p>
+				<pre class="gitcommands">
+				git add nombre del archivo
+				o
+				git add . (el. permite subir todos los archivos modificados a la vez)
+				</pre>
+				<p>Si hacemos un <code>git status</code> despues del <code>git add</code>podremos comprobar que los archivos modificados han sudi subido al stating area</p>
+				<img src="img/gitstatus2.png" alt="git status">
+			</div>
+				<div class="commands_details">
+				<h4>Añadir los archivos al repositorio local</h4>
+				<p>Los archivos en el área de seguimiento se tienen que subir al repositorio local. Para lo que se utiliza el comando <code>commit</code> de Git seguido de un comentario. Esto es:</p>
+				<pre class="gitcommands">
+				git commit -m "mensaje con descripción de los cambios"
+				</pre>
+			</div>
+			</div>
+				<div class="commands_details">
+				<h4>Visualizar los commits</h4>
+				<p>Para consultar la lista de <code>commit</code> se puede utilizar el commando siguiente:</p>
+				<pre class="gitcommands">
+				git log
+				o
+				git log --oneline
+				</pre>
+			</div>
+
+		</section>
+	</main>
+	<footer>
+		<p>&copy; Escuela Espai - Barcelona 2020</p>
+	</footer>
+</body>
+</html>
